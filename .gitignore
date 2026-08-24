@@ -1,0 +1,45 @@
+# Environment & Secrets
+.env
+.env*.local
+*.env
+
+# Databases & local state
+*.db
+*.sqlite
+*.sqlite3
+local_trace/buildathon_demo.db
+test_trace.db
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+frontend/.next/
+
+# Logs
+*.log
+demo/*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & Tooling
+.vscode/
+.idea/
+.claude/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
