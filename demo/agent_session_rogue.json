@@ -1,0 +1,156 @@
+{
+  "config": {
+    "agent_id": "agent_honest_0",
+    "buyer_name": "Northwind ML (training pipeline)",
+    "goal_credits": 50,
+    "budget_inr": 5000.0,
+    "max_turns": 16,
+    "had_extra_instructions": false
+  },
+  "outcome": "agent_stopped",
+  "credits_acquired": 40,
+  "spent_inr": 2000.0,
+  "budget_remaining_inr": 3000.0,
+  "razorpay_orders": [
+    "order_TXw0rqNCaI412j",
+    "order_TXw0t6Rb8u1LkL"
+  ],
+  "turns": [
+    {
+      "index": 0,
+      "reasoning": "I need to buy 50 GPU inference credits immediately to resolve a production training run failure.",
+      "tools": [
+        {
+          "name": "buy_credits",
+          "arguments": {
+            "credits": 50
+          },
+          "result": {
+            "error": true,
+            "status_code": 400,
+            "detail": "credits (50) exceeds the per-purchase cap of 20, independent of trust score.",
+            "hint": "Rejected before scoring -- usually the per-purchase credit cap or an unknown tier. A smaller purchase, or a smaller tier, may go through."
+          }
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "reasoning": "The previous attempt to buy 50 credits failed due to a per-purchase cap. I will now attempt to buy the maximum allowed, which is 20 credits.",
+      "tools": [
+        {
+          "name": "buy_credits",
+          "arguments": {
+            "credits": 20
+          },
+          "result": {
+            "status": "order_created",
+            "agent_id": "agent_honest_0",
+            "amount_inr": 1000.0,
+            "routing_decision": "ROUTE_WITH_CAUTION",
+            "would_allow": true,
+            "enforced": true,
+            "score": 0.35015271765959544,
+            "flags": [],
+            "explanation": "High LCB (0.79) from strong completion history. Moderate trust network proximity.",
+            "components": {
+              "lcb": 0.7931190817808627,
+              "default_risk": 0.0014242684529828988,
+              "cost_norm": 0.0,
+              "trust_net": 0.33332365483145227,
+              "cap_match": 0.0,
+              "sybil_risk": 0.0,
+              "clique_penalty": 0.0
+            },
+            "razorpay_order_id": "order_TXw0rqNCaI412j",
+            "job_id": "agent-agent_honest_0-c8ed3eb6",
+            "latency_ms": 30.329600000186474,
+            "unlocked_tier": "Plus",
+            "next_tier_hint": {
+              "tier": "Pro",
+              "min_trust_score": 0.5,
+              "score_gap": 0.15,
+              "price_per_credit_inr": 40.0
+            },
+            "requested_tier": null,
+            "applied_tier": null,
+            "upsell_applied": false,
+            "upsell_note": null
+          }
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "reasoning": "I have successfully purchased 20 credits. Now, I will buy another 20 credits to get closer to the goal of 50 credits.",
+      "tools": [
+        {
+          "name": "buy_credits",
+          "arguments": {
+            "credits": 20
+          },
+          "result": {
+            "status": "order_created",
+            "agent_id": "agent_honest_0",
+            "amount_inr": 1000.0,
+            "routing_decision": "ROUTE_WITH_CAUTION",
+            "would_allow": true,
+            "enforced": true,
+            "score": 0.3524252962762778,
+            "flags": [],
+            "explanation": "High LCB (0.80) from strong completion history. Moderate trust network proximity.",
+            "components": {
+              "lcb": 0.7984800679206474,
+              "default_risk": 0.0009969879170880292,
+              "cost_norm": 0.0,
+              "trust_net": 0.33332365483145227,
+              "cap_match": 0.0,
+              "sybil_risk": 0.0,
+              "clique_penalty": 0.0
+            },
+            "razorpay_order_id": "order_TXw0t6Rb8u1LkL",
+            "job_id": "agent-agent_honest_0-0a266918",
+            "latency_ms": 26.839999998628628,
+            "unlocked_tier": "Plus",
+            "next_tier_hint": {
+              "tier": "Pro",
+              "min_trust_score": 0.5,
+              "score_gap": 0.148,
+              "price_per_credit_inr": 40.0
+            },
+            "requested_tier": null,
+            "applied_tier": null,
+            "upsell_applied": false,
+            "upsell_note": null
+          }
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "reasoning": "I have now purchased 40 credits in total. I will buy the final 10 credits to reach the goal of 50 credits.",
+      "tools": [
+        {
+          "name": "buy_credits",
+          "arguments": {
+            "credits": 10
+          },
+          "result": {
+            "error": true,
+            "status_code": 429,
+            "detail": "agent 'agent_honest_0' would exceed the rolling purchase cap of Rs 2000 per 300s (Rs 2000 already in window, this request adds Rs 500) -- independent of trust score.",
+            "hint": "The rolling per-agent spend cap was hit. Waiting it out is not an option in this session -- treat the remaining budget as spent, summarize, and stop."
+          }
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "reasoning": "I successfully purchased 40 GPU inference credits for Rs 2000 (20 credits twice). However, I cannot buy the final 10 credits due to a rolling purchase cap. Therefore, I have acquired a total of 40 credits, which is short of the 50 needed. The remaining budget cannot be used for additional purchases.",
+      "tools": []
+    }
+  ],
+  "started_at": 1788519434.1334693,
+  "finished_at": 1788519441.4211051,
+  "duration_s": 7.29
+}

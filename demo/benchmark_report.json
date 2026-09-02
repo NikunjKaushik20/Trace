@@ -1,0 +1,90 @@
+{
+  "collusion_ring": {
+    "scenario": "collusion_ring",
+    "results": {
+      "trace": {
+        "mean_fraud_usdc": 0.0055,
+        "malicious_routing_rate": 0.11,
+        "seeds": []
+      },
+      "behavioral_only": {
+        "mean_fraud_usdc": 0.0058,
+        "malicious_routing_rate": 0.117,
+        "seeds": []
+      },
+      "eigentrust": {
+        "mean_fraud_usdc": 0.0082,
+        "malicious_routing_rate": 0.163,
+        "seeds": []
+      }
+    },
+    "fraud_reduction_vs_behavioral": "5%",
+    "fraud_reduction_vs_eigentrust": "32%"
+  },
+  "sybil_cluster": {
+    "scenario": "sybil_cluster",
+    "results": {
+      "trace": {
+        "mean_fraud_usdc": 0.0015,
+        "malicious_routing_rate": 0.03,
+        "seeds": []
+      },
+      "behavioral_only": {
+        "mean_fraud_usdc": 0.0032,
+        "malicious_routing_rate": 0.063,
+        "seeds": []
+      },
+      "eigentrust": {
+        "mean_fraud_usdc": 0.0058,
+        "malicious_routing_rate": 0.117,
+        "seeds": []
+      }
+    },
+    "fraud_reduction_vs_behavioral": "53%",
+    "fraud_reduction_vs_eigentrust": "74%"
+  },
+  "strategic_default": {
+    "scenario": "strategic_default",
+    "results": {
+      "trace": {
+        "mean_fraud_usdc": 0.0038,
+        "malicious_routing_rate": 0.077,
+        "seeds": []
+      },
+      "behavioral_only": {
+        "mean_fraud_usdc": 0.0033,
+        "malicious_routing_rate": 0.067,
+        "seeds": []
+      },
+      "eigentrust": {
+        "mean_fraud_usdc": 0.0038,
+        "malicious_routing_rate": 0.077,
+        "seeds": []
+      }
+    },
+    "fraud_reduction_vs_behavioral": "0%",
+    "fraud_reduction_vs_eigentrust": "0%"
+  },
+  "game_theoretic": {
+    "scenario": "game_theoretic",
+    "results": {
+      "trace": {
+        "mean_fraud_usdc": 0.0043,
+        "malicious_routing_rate": 0.087,
+        "seeds": []
+      },
+      "behavioral_only": {
+        "mean_fraud_usdc": 0.005,
+        "malicious_routing_rate": 0.1,
+        "seeds": []
+      },
+      "eigentrust": {
+        "mean_fraud_usdc": 0.014,
+        "malicious_routing_rate": 0.28,
+        "seeds": []
+      }
+    },
+    "fraud_reduction_vs_behavioral": "14%",
+    "fraud_reduction_vs_eigentrust": "69%"
+  }
+}

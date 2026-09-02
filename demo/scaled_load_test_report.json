@@ -1,0 +1,407 @@
+{
+  "population": {
+    "n_honest": 20,
+    "n_sybil": 15,
+    "n_defector": 1
+  },
+  "seeding": {
+    "total_events": 905,
+    "elapsed_seconds": 442.0619999999999
+  },
+  "graph_processing_seconds": 1.860000000000582,
+  "purchase_attempts": {
+    "count": 36,
+    "elapsed_seconds": 6.843000000000757,
+    "latency_ms": {
+      "p50": 209.56705000025977,
+      "p95": 292.03104999896823,
+      "p99": 616.2474399993692,
+      "max": 758.2695999990392
+    }
+  },
+  "blocked_count": 16,
+  "blocked_fraud_count": 16,
+  "fraud_population_size": 16,
+  "results": [
+    {
+      "agent_id": "agent_honest_0",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 758.2695999990392,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_1",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 262.1968999992532,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_2",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 352.4919999999838,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_3",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 245.3366999998252,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_4",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 265.7143999986147,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_5",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 266.24310000079277,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_6",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 208.76979999957257,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_7",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 239.72590000084892,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_8",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 212.83880000009958,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_9",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 222.07799999887357,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_10",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 210.36430000094697,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_11",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 218.008000001646,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_12",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 228.59260000041104,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_13",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 232.93200000080105,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_14",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 244.06490000001213,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_15",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 259.7139999998035,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_16",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 271.8773999986297,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_17",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 232.3039000002609,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_18",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 226.9804000006843,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_honest_19",
+      "status": "order_created",
+      "routing_decision": "ROUTE_WITH_CAUTION",
+      "flags": [],
+      "wall_clock_ms": 198.0944000006275,
+      "agent_class": "honest"
+    },
+    {
+      "agent_id": "agent_defector_0",
+      "status": "blocked",
+      "routing_decision": "DENY",
+      "flags": [
+        "CUSUM_FIRED"
+      ],
+      "wall_clock_ms": 60.39270000110264,
+      "agent_class": "defector"
+    },
+    {
+      "agent_id": "agent_sybil_0",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 61.223300001074676,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_1",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 59.59179999990738,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_2",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 58.91010000050301,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_3",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 59.71000000135973,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_4",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 62.000699999771314,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_5",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 69.28909999987809,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_6",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 67.22749999971711,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_7",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 64.82800000048883,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_8",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 62.43549999999232,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_9",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 78.90769999903569,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_10",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 67.62949999938428,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_11",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 71.77409999894735,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_12",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 73.41339999948104,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_13",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 62.42989999918791,
+      "agent_class": "sybil"
+    },
+    {
+      "agent_id": "agent_sybil_14",
+      "status": "blocked",
+      "routing_decision": "QUARANTINE",
+      "flags": [
+        "SYBIL_RISK_HIGH",
+        "CLIQUE_PENALTY_HIGH",
+        "CUSUM_FIRED",
+        "COLD_START",
+        "FRAGMENTED_VISIBILITY"
+      ],
+      "wall_clock_ms": 69.55799999923329,
+      "agent_class": "sybil"
+    }
+  ]
+}
