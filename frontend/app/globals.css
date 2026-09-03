@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TRACE — Direction: The Ledger House
+   (pinned directly from the user's brief — warm archival palette,
+   maximalism, visible glassmorphism, light theme — not run through
+   the concept-seed roll; the brief was already this specific, and
+   the user had just rejected the previous terminal direction outright.)
+
+   THESIS: trust isn't asserted, it's grown and witnessed. TRACE reads
+   like a warm, hand-kept ledger of provenance — every score a stamped,
+   glass-cased entry sitting over a living root-network of the trust
+   graph — refusing the generic dark fintech-terminal look entirely.
+
+   OWN-WORLD: warm cashmere/paper ground, sienna and deep bush-green as
+   the two committed colors (not accents — they carry whole regions),
+   oak as a third warm neutral, a single cool teal reserved sparingly
+   for live/data readouts; frosted glass used specifically as a
+   "verification" material — score panels and live readouts sit in
+   visible glass over textured, illustrated grounds, never as generic
+   card chrome; a mycelial/root-network line motif for the trust graph;
+   editorial serif display (Petrona) + a warm grotesk sans (Work Sans)
+   for everything structural + tabular mono (JetBrains Mono) reserved
+   strictly for real numbers — scores, latency, order IDs, weights.
+
+   FINISH: unreviewed and undocumented is unfinished; this build ends
+   with the finish review, the verdict, DESIGN.md, and every shipping
+   raster carrying its provenance.
+============================================================ */
+
+:root {
+  /* Ground + paper — a warm cashmere, not a cold neutral */
+  --paper: #f6efe0;
+  --paper-deep: #efe1c5;
+  --paper-deepest: #e4d1a8;
+  --panel: #fffcf5;
+  --panel-solid: #fffdf9;
+
+  /* Ink — warm near-black brown, never pure gray */
+  --ink: #241a10;           /* ~16.8:1 on --paper */
+  --ink-dim: #6a5843;       /* ~5.9:1 on --paper */
+  --ink-faint: #93826a;     /* ~3.5:1 — large text / decorative only */
+
+  --rule: #e1d1ac;
+  --rule-strong: #b99b68;
+
+  /* The two committed colors — each carries whole regions, not accents */
+  --sienna: #a94e28;        /* ~5.4:1 on --paper */
+  --sienna-deep: #7c3418;
+  --sienna-bg: #f3e0cf;
+  --bush: #1f3d2c;          /* ~11.6:1 on --paper */
+  --bush-bright: #2c6b45;   /* ~4.9:1 on --paper */
+  --bush-bg: #e2ead9;
+
+  /* Third warm neutral */
+  --oak: #b8925a;
+  --oak-bg: #efe2c3;
+
+  /* The one cool color — sparing, reserved for live data / links */
+  --teal: #235d68;          /* ~6.6:1 on --paper */
+  --teal-bright: #3b8b98;
+  --teal-bg: #dfeaea;
+
+  /* Semantic roles, mapped onto the committed palette */
+  --allow: var(--bush-bright);
+  --allow-bg: var(--bush-bg);
+  --deny: var(--sienna-deep);
+  --deny-bg: var(--sienna-bg);
+  --data: var(--teal);
+  --data-bg: var(--teal-bg);
+
+  /* Glass — a specific material, not decoration: frosted, warm-tinted,
+     used only where the page means "this is a verified reading" */
+  --glass-bg: rgba(255, 253, 246, 0.58);
+  --glass-bg-strong: rgba(255, 253, 246, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.7);
+  --glass-shadow: 0 1px 1px rgba(90, 58, 26, 0.06), 0 20px 44px -18px rgba(76, 46, 18, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  --glass-shadow-sm: 0 1px 1px rgba(90, 58, 26, 0.05), 0 10px 24px -14px rgba(76, 46, 18, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-paper-deepest: var(--paper-deepest);
+  --color-panel: var(--panel);
+  --color-panel-solid: var(--panel-solid);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-sienna: var(--sienna);
+  --color-sienna-deep: var(--sienna-deep);
+  --color-sienna-bg: var(--sienna-bg);
+  --color-bush: var(--bush);
+  --color-bush-bright: var(--bush-bright);
+  --color-bush-bg: var(--bush-bg);
+  --color-oak: var(--oak);
+  --color-oak-bg: var(--oak-bg);
+  --color-teal: var(--teal);
+  --color-teal-bright: var(--teal-bright);
+  --color-teal-bg: var(--teal-bg);
+  --color-allow: var(--allow);
+  --color-allow-bg: var(--allow-bg);
+  --color-deny: var(--deny);
+  --color-deny-bg: var(--deny-bg);
+  --color-data: var(--data);
+  --color-data-bg: var(--data-bg);
+  --font-display: var(--font-petrona);
+  --font-sans: var(--font-work-sans);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-work-sans), -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15.5px;
+  position: relative;
+}
+
+/* Paper grain — a fine noise texture over the whole ground, the one
+   thing that keeps a flat cream fill from reading like a template */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.32  0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-petrona), Georgia, serif;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+
+.font-display {
+  font-family: var(--font-petrona), Georgia, serif;
+}
+
+.tnum {
+  font-family: var(--font-jetbrains-mono), "SFMono-Regular", Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* ---- Glass, as a material -------------------------------------------- */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+.glass-sm {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow-sm);
+}
+
+/* Torn-paper card edge — an authored svg mask, not a border-radius */
+.torn-edge {
+  --torn: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 24' preserveAspectRatio='none'><path d='M0 24 L0 6 Q10 0 20 5 T42 4 T64 7 T88 3 T112 6 T136 2 T160 6 T184 4 T208 7 T232 3 T256 6 T280 2 T304 6 T328 4 T352 6 T376 3 L400 6 L400 24 Z' fill='black'/></svg>");
+}
+
+/* ---- Browser surfaces carry the design too ---------------------------- */
+::selection {
+  background: var(--sienna);
+  color: var(--panel-solid);
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rule-strong);
+  border: 3px solid var(--paper-deep);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sienna);
+}
+* {
+  scrollbar-color: var(--rule-strong) var(--paper-deep);
+  scrollbar-width: thin;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sienna);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+/* ---- Decorative ground blobs — soft color behind glass, never flat white on flat white ---- */
+.blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(70px);
+  pointer-events: none;
+}
+.blob-sienna {
+  width: 30rem;
+  height: 30rem;
+  top: -9rem;
+  left: -8rem;
+  opacity: 0.4;
+  background: radial-gradient(circle at 30% 30%, var(--sienna) 0%, transparent 70%);
+}
+.blob-bush {
+  width: 34rem;
+  height: 34rem;
+  bottom: -14rem;
+  right: -9rem;
+  opacity: 0.3;
+  background: radial-gradient(circle at 60% 40%, var(--bush-bright) 0%, transparent 70%);
+}
+.blob-oak {
+  width: 24rem;
+  height: 24rem;
+  top: 32%;
+  right: 6%;
+  opacity: 0.32;
+  background: radial-gradient(circle, var(--oak) 0%, transparent 72%);
+}
+.blob-teal {
+  width: 26rem;
+  height: 26rem;
+  top: -8rem;
+  right: -6rem;
+  opacity: 0.3;
+  background: radial-gradient(circle at 40% 40%, var(--teal-bright) 0%, transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
