@@ -1,0 +1,433 @@
+{
+  "naive": {
+    "summary": {
+      "label": "naive",
+      "total_attempts": 9,
+      "orders_created": 9,
+      "blocked": 0,
+      "fraud_amount_at_risk_inr": 600.0,
+      "fraud_agents_with_orders_created": [
+        "agent_defector_0",
+        "agent_sybil_0",
+        "agent_sybil_1",
+        "agent_sybil_2",
+        "agent_sybil_3",
+        "agent_sybil_4"
+      ]
+    },
+    "attempts": [
+      {
+        "agent_id": "agent_honest_0",
+        "agent_class": "honest",
+        "status": "order_created",
+        "routing_decision": "ROUTE_WITH_CAUTION",
+        "would_allow": true,
+        "enforced": false,
+        "score": 0.35015271765959544,
+        "flags": [],
+        "explanation": "High LCB (0.79) from strong completion history. Moderate trust network proximity.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX6PFF1SVNgd",
+        "job_id": "buy-agent_honest_0-9990b1c0"
+      },
+      {
+        "agent_id": "agent_honest_1",
+        "agent_class": "honest",
+        "status": "order_created",
+        "routing_decision": "ROUTE_WITH_CAUTION",
+        "would_allow": true,
+        "enforced": false,
+        "score": 0.35015271765959544,
+        "flags": [],
+        "explanation": "High LCB (0.79) from strong completion history. Moderate trust network proximity.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX6c0iI2zE6n",
+        "job_id": "buy-agent_honest_1-907e99d8"
+      },
+      {
+        "agent_id": "agent_honest_2",
+        "agent_class": "honest",
+        "status": "order_created",
+        "routing_decision": "ROUTE_WITH_CAUTION",
+        "would_allow": true,
+        "enforced": false,
+        "score": 0.35015271765959544,
+        "flags": [],
+        "explanation": "High LCB (0.79) from strong completion history. Moderate trust network proximity.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX6v8a6jsHLo",
+        "job_id": "buy-agent_honest_2-023d046b"
+      },
+      {
+        "agent_id": "agent_defector_0",
+        "agent_class": "defector",
+        "status": "order_created",
+        "routing_decision": "DENY",
+        "would_allow": false,
+        "enforced": false,
+        "score": 0.0,
+        "flags": [
+          "CUSUM_FIRED"
+        ],
+        "explanation": "Moderate LCB (0.64). CUSUM change-point alarm fired on a sudden default-rate spike - treated as a proven strategic default, does not decay.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX7C8ZibtT6P",
+        "job_id": "buy-agent_defector_0-3cb5efb7"
+      },
+      {
+        "agent_id": "agent_sybil_0",
+        "agent_class": "sybil",
+        "status": "order_created",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": false,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX7NGEW0ANBd",
+        "job_id": "buy-agent_sybil_0-86b3aeb0"
+      },
+      {
+        "agent_id": "agent_sybil_1",
+        "agent_class": "sybil",
+        "status": "order_created",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": false,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX7WcspRZh3H",
+        "job_id": "buy-agent_sybil_1-de812d19"
+      },
+      {
+        "agent_id": "agent_sybil_2",
+        "agent_class": "sybil",
+        "status": "order_created",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": false,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX7j529MmomB",
+        "job_id": "buy-agent_sybil_2-3e78415d"
+      },
+      {
+        "agent_id": "agent_sybil_3",
+        "agent_class": "sybil",
+        "status": "order_created",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": false,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX7x5w6yYert",
+        "job_id": "buy-agent_sybil_3-d7f4323b"
+      },
+      {
+        "agent_id": "agent_sybil_4",
+        "agent_class": "sybil",
+        "status": "order_created",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": false,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyX84nozBMjwA",
+        "job_id": "buy-agent_sybil_4-59dd845d"
+      }
+    ]
+  },
+  "protected": {
+    "summary": {
+      "label": "protected",
+      "total_attempts": 9,
+      "orders_created": 3,
+      "blocked": 6,
+      "fraud_amount_at_risk_inr": 0,
+      "fraud_agents_with_orders_created": []
+    },
+    "attempts": [
+      {
+        "agent_id": "agent_honest_0",
+        "agent_class": "honest",
+        "status": "order_created",
+        "routing_decision": "ROUTE_WITH_CAUTION",
+        "would_allow": true,
+        "enforced": true,
+        "score": 0.3524252962762778,
+        "flags": [],
+        "explanation": "High LCB (0.80) from strong completion history. Moderate trust network proximity.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyXBErCJDfVE8",
+        "job_id": "buy-agent_honest_0-e685d905"
+      },
+      {
+        "agent_id": "agent_honest_1",
+        "agent_class": "honest",
+        "status": "order_created",
+        "routing_decision": "ROUTE_WITH_CAUTION",
+        "would_allow": true,
+        "enforced": true,
+        "score": 0.3524252962762778,
+        "flags": [],
+        "explanation": "High LCB (0.80) from strong completion history. Moderate trust network proximity.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyXBb3iTjmjDe",
+        "job_id": "buy-agent_honest_1-724ca285"
+      },
+      {
+        "agent_id": "agent_honest_2",
+        "agent_class": "honest",
+        "status": "order_created",
+        "routing_decision": "ROUTE_WITH_CAUTION",
+        "would_allow": true,
+        "enforced": true,
+        "score": 0.3524252962762778,
+        "flags": [],
+        "explanation": "High LCB (0.80) from strong completion history. Moderate trust network proximity.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": "order_TXyXBobigks92w",
+        "job_id": "buy-agent_honest_2-50bc1828"
+      },
+      {
+        "agent_id": "agent_defector_0",
+        "agent_class": "defector",
+        "status": "blocked",
+        "routing_decision": "DENY",
+        "would_allow": false,
+        "enforced": true,
+        "score": 0.0,
+        "flags": [
+          "CUSUM_FIRED"
+        ],
+        "explanation": "Moderate LCB (0.64). CUSUM change-point alarm fired on a sudden default-rate spike - treated as a proven strategic default, does not decay.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": null,
+        "job_id": "buy-agent_defector_0-0815550d"
+      },
+      {
+        "agent_id": "agent_sybil_0",
+        "agent_class": "sybil",
+        "status": "blocked",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": true,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": null,
+        "job_id": "buy-agent_sybil_0-d963faaa"
+      },
+      {
+        "agent_id": "agent_sybil_1",
+        "agent_class": "sybil",
+        "status": "blocked",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": true,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": null,
+        "job_id": "buy-agent_sybil_1-fe5c43af"
+      },
+      {
+        "agent_id": "agent_sybil_2",
+        "agent_class": "sybil",
+        "status": "blocked",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": true,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": null,
+        "job_id": "buy-agent_sybil_2-7cc5d298"
+      },
+      {
+        "agent_id": "agent_sybil_3",
+        "agent_class": "sybil",
+        "status": "blocked",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": true,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": null,
+        "job_id": "buy-agent_sybil_3-cc6bcb26"
+      },
+      {
+        "agent_id": "agent_sybil_4",
+        "agent_class": "sybil",
+        "status": "blocked",
+        "routing_decision": "QUARANTINE",
+        "would_allow": false,
+        "enforced": true,
+        "score": 0.0,
+        "flags": [
+          "SYBIL_RISK_HIGH",
+          "CLIQUE_PENALTY_HIGH",
+          "COLD_START",
+          "FRAGMENTED_VISIBILITY"
+        ],
+        "explanation": "Low LCB (0.05) - thin evidence. Elevated default risk (0.76). High sybil risk (edge-to-job ratio anomaly). Clique penalty triggered - coordinated neighborhood.",
+        "amount_inr": 100.0,
+        "razorpay_order_id": null,
+        "job_id": "buy-agent_sybil_4-4da2c94c"
+      }
+    ]
+  },
+  "cusum_replay": {
+    "cusum_fired": true,
+    "final_ema_default_rate": 0.9423519899999997
+  },
+  "benchmark_vs_baselines": {
+    "collusion_ring": {
+      "scenario": "collusion_ring",
+      "results": {
+        "trace": {
+          "mean_fraud_usdc": 0.0055,
+          "malicious_routing_rate": 0.11,
+          "seeds": []
+        },
+        "behavioral_only": {
+          "mean_fraud_usdc": 0.0058,
+          "malicious_routing_rate": 0.117,
+          "seeds": []
+        },
+        "eigentrust": {
+          "mean_fraud_usdc": 0.0082,
+          "malicious_routing_rate": 0.163,
+          "seeds": []
+        }
+      },
+      "fraud_reduction_vs_behavioral": "5%",
+      "fraud_reduction_vs_eigentrust": "32%"
+    },
+    "sybil_cluster": {
+      "scenario": "sybil_cluster",
+      "results": {
+        "trace": {
+          "mean_fraud_usdc": 0.0015,
+          "malicious_routing_rate": 0.03,
+          "seeds": []
+        },
+        "behavioral_only": {
+          "mean_fraud_usdc": 0.0032,
+          "malicious_routing_rate": 0.063,
+          "seeds": []
+        },
+        "eigentrust": {
+          "mean_fraud_usdc": 0.0058,
+          "malicious_routing_rate": 0.117,
+          "seeds": []
+        }
+      },
+      "fraud_reduction_vs_behavioral": "53%",
+      "fraud_reduction_vs_eigentrust": "74%"
+    },
+    "strategic_default": {
+      "scenario": "strategic_default",
+      "results": {
+        "trace": {
+          "mean_fraud_usdc": 0.0038,
+          "malicious_routing_rate": 0.077,
+          "seeds": []
+        },
+        "behavioral_only": {
+          "mean_fraud_usdc": 0.0033,
+          "malicious_routing_rate": 0.067,
+          "seeds": []
+        },
+        "eigentrust": {
+          "mean_fraud_usdc": 0.0038,
+          "malicious_routing_rate": 0.077,
+          "seeds": []
+        }
+      },
+      "fraud_reduction_vs_behavioral": "0%",
+      "fraud_reduction_vs_eigentrust": "0%"
+    },
+    "game_theoretic": {
+      "scenario": "game_theoretic",
+      "results": {
+        "trace": {
+          "mean_fraud_usdc": 0.0043,
+          "malicious_routing_rate": 0.087,
+          "seeds": []
+        },
+        "behavioral_only": {
+          "mean_fraud_usdc": 0.005,
+          "malicious_routing_rate": 0.1,
+          "seeds": []
+        },
+        "eigentrust": {
+          "mean_fraud_usdc": 0.014,
+          "malicious_routing_rate": 0.28,
+          "seeds": []
+        }
+      },
+      "fraud_reduction_vs_behavioral": "14%",
+      "fraud_reduction_vs_eigentrust": "69%"
+    }
+  }
+}
